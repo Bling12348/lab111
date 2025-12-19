@@ -1,7 +1,8 @@
 from typing import Dict, List
 
 import pytest
-import copy
+import copypoetry run pytest tests/test_anonymizer_engine.py::test_given_request_anonymizers_return_list
+
 
 from presidio_anonymizer import AnonymizerEngine
 from presidio_anonymizer.entities import (
@@ -17,7 +18,7 @@ from presidio_anonymizer.operators import OperatorType, AHDS_AVAILABLE
 
 def test_given_request_anonymizers_return_list():
     engine = AnonymizerEngine()
-    expected_list = {"hash", "mask", "redact", "replace", "custom", "keep", "encrypt"}
+    expected_list = {"hash", "mask", "redact", "replace", "custom", "keep", "encrypt", "initial"}
     if AHDS_AVAILABLE:
         expected_list.add("surrogate_ahds")
     anon_list = set(engine.get_anonymizers())
