@@ -1,8 +1,7 @@
 from typing import Dict, List
 
 import pytest
-import copypoetry run pytest tests/test_anonymizer_engine.py::test_given_request_anonymizers_return_list
-
+import copygit 
 
 from presidio_anonymizer import AnonymizerEngine
 from presidio_anonymizer.entities import (
